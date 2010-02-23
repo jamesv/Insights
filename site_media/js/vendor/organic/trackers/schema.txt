@@ -1,0 +1,12 @@
+Tracker
+	type 		= 'google',
+	baseline 	= 'dodge',
+	accounts 	= {
+		'test' = 'abc', 
+		'prod' = 'def',
+		}
+		
+	track
+		page({name, path, name_append, path_append, dryrun})
+		link({id, position, type, dryrun})
+		event({?})

@@ -1,0 +1,13 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: #cccccc;
+    }
+
+#wrapper {
+    width: 320px;
+    background: #ffffff;
+    }
+a {
+    outline: none;
+}

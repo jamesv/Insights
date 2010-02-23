@@ -1,0 +1,81 @@
+#w {
+    background : #dddddd;
+    margin: 0;
+    padding: 7px;
+    }
+
+    #w li {
+        list-style: none;
+        margin: 0 0 12px 0;
+        padding: 5px;
+        background : #ffffff;
+        border-radius: 5px;
+        -moz-border-radius: 5px;
+        -webkit-border-radius: 5px;
+        }
+
+/*
+
+
+*/    
+
+    .lineGraph .normalGraph {
+        height: 100px;
+        width: 100%;
+        }
+
+/*
+
+
+*/    
+        
+    .progressBar {
+        border: 1px solid #cccccc;
+        background: url('img/progress_bg.png');
+        }
+        
+        .progressBar .progressFill {
+            height: 12px;
+            background: url('img/progress_fill.png');
+            border-right: 1px solid #ffffff;
+            }
+/*
+
+
+*/    
+    .calendar table {
+        background: #dddddd;
+        width: 100%;
+        }
+
+    .calendar dl {
+        padding: 7px;
+        }
+        
+        .calendar dt {
+            padding: 0;
+            margin: 0;
+            width: 55px;
+            clear: left;
+            float: left;
+            }
+            
+        .calendar dd {
+            padding: 0;
+            margin: 0;
+
+            float: left;
+            }
+/*
+
+
+*/            
+    .rss ul {
+        margin: 5px 0 0;
+        padding: 0;
+        }
+        
+        #w .rss li {
+            padding: 3px;
+            border-top: 1px dotted #dddddd;
+            }

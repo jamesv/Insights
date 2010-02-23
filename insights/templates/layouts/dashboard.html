@@ -1,0 +1,46 @@
+{% load ui %}
+<html>
+<head>
+	<meta name="viewport" content="width=320; initial-scale=1.0; maximum-scale=1.0; minimum-scale=1.0" />
+
+	<link rel="shortcut icon" type="image/x-icon" href="{{media_url}}/img/favicon.ico">
+		
+	<link rel="stylesheet" href="{{media_url}}/css/vendor/jamesv/utils.css" type="text/css" media="screen" charset="utf-8"/>
+	<link rel="stylesheet" href="{{media_url}}/css/insights/layout.css" type="text/css" media="screen" charset="utf-8"/>
+		
+	<link rel="stylesheet" href="{{media_url}}/themes/{{theme|default:"organic"}}/layout.css" type="text/css" media="screen" charset="utf-8"/>
+	<link rel="stylesheet" href="{{media_url}}/themes/{{theme|default:"organic"}}/widgets.css" type="text/css" media="screen" charset="utf-8"/>
+	<link rel="stylesheet" href="{{media_url}}/themes/{{theme|default:"organic"}}/fonts_colors.css" type="text/css" media="screen" charset="utf-8"/>
+
+	<script src="{{media_url}}/js/vendor/jquery/jquery-1.3.2.min.js"></script>
+	<script src="{{media_url}}/js/vendor/jquery/jquery.query-2.1.7.js"></script>
+	<script src="{{media_url}}/js/vendor/flot/jquery.flot.js"></script>
+	
+	<script src="{{media_url}}/js/vendor/organic/jquery.helpers.js"></script>
+	<script src="{{media_url}}/js/vendor/organic/core.js"></script>
+	<script src="{{media_url}}/js/vendor/organic/utils.js"></script>
+	<script src="{{media_url}}/js/vendor/organic/tracking.js"></script>
+	
+	<script src="{{media_url}}/js/insights/core.js"></script>
+	
+	
+
+	<title>{% block title %}{% endblock %}</title>
+</head>
+<body>
+	<div id='wrapper'>
+		<div id='header'>
+			<div id='logo'>&nbsp;</div>
+			<h2 id='dashboard_name'>{{dashboard.title|default:"Welcome"}}</h2>
+
+			<ul>
+				{{nav|drawNav}}
+			</ul>
+		</div>
+
+		<ul id='w'>
+			{% block content %}{% endblock %}			
+		</ul>
+	</div>
+</body>
+</html>

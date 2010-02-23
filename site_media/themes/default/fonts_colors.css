@@ -1,0 +1,103 @@
+a {
+    color: #129deb;
+    }
+
+/*
+
+
+*/    
+
+#header,
+#w {
+    font-family: Verdana;
+    font-size: 11px;
+    }
+
+#header {
+    background: #444444;
+    }
+
+    #header li {
+        background: #ffffff;
+        }
+        
+        #header li a {
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 12px;
+            }
+        
+    #w h2 {
+        font-size: 11px;
+        margin: 0;
+        padding: 0;
+        }
+
+    #w h4 {
+        margin: 0;
+        padding: 0;
+        }
+
+
+/*
+
+
+*/    
+    .count h4 {
+        font-size: 36px;
+        color: #9eb949;
+        }
+/*
+
+
+*/        
+    .progress h4 {
+        color: #444444;
+        font-size: 10px;
+        font-weight: normal;
+        padding-top: 2px;
+        }
+
+/*
+
+
+*/        
+    .calendar td {
+        padding: 3px 0;
+        text-align: center;
+        font-size: 10px;
+        background: #dddddd;
+        color: #ffffff;
+        }
+        
+        .calendar td.in_range {
+            background: #f6f6f6;
+            color: #aaaaaa;
+            }
+            
+        .calendar td.active {
+            font-weight: bold;
+            background: #bada55;
+            color: #ffffff;
+            }
+            
+        .calendar dt {
+            font-weight: bold;
+            color: #444444;
+            }
+            
+        .calendar dd {
+            color: #777777;
+            }
+        
+
+/*
+
+
+*/
+    .rss div {
+        font-size: 9px;
+        color: #777777;
+        padding-top: 2px;
+        text-align: right;
+        }

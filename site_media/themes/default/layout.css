@@ -1,0 +1,41 @@
+#header {
+    position: relative;
+    height: 50px;
+    }
+
+    #header #logo {
+        border: 1px solid #ffffff;
+        background: url('img/progress_bg.png');
+        height: 34px;
+        width: 45px;
+        position: absolute;
+        top: 7px;
+        left: 7px;
+        
+        text-align: center;
+        color: #777777;
+        }
+    
+    #header ul {
+        position: absolute;
+        top: 0px;
+        right: 0px;    
+        margin: 0;
+        padding: 0;
+        }
+        
+        #header li {
+            float: left;
+            list-style: none;
+            border-radius: 0 0 7px 7px;
+            -moz-border-radius: 0 0 7px 7px;
+            -webkit-border-bottom-left-radius:7px;
+            -webkit-border-bottom-right-radius:7px;
+            padding: 0px;
+            margin: 0 2px 0 0;
+            }
+            
+            #header li a {
+                display: block;
+                padding: 7px 14px;
+                }

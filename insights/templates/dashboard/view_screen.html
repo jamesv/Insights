@@ -1,0 +1,11 @@
+{% for widget in widgets %}
+<li id="widget_{{widget.id}}" class="{{widget.style}}" >
+	<h2>{{widget.title}}</h2>
+	<div class='contents'>
+	{{widget.contents}}
+	</div>
+</li>
+{% endfor%}
+<script>
+	$(function(){insights.setTab({{dashboardscreen_id}})});
+</script>

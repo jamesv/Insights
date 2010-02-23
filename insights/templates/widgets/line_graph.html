@@ -1,0 +1,52 @@
+<div class='normalGraph' id='linegraph_{{id}}'></div>
+<script>
+$(function () {
+	var data = {
+			data: 	[
+{% for value, timestamp in data.graph_points %}
+				[{{timestamp}},{{value}}]{% if not forloop.last %},{% endif %}
+{% endfor %}
+			],
+			lines:  {
+				show:       true, 
+				fill:       true, 
+				fillColor:  "rgba(255, 255, 255, .05)", 
+				lineWidth:  2
+			},
+			points: {
+				show:       true,
+				radius:     3,
+				lineWidth:  0,
+				fill:       true, 
+				fillColor:  "rgba(255, 255, 255, 1)", 
+			},
+
+			color:          "rgba(131, 174, 189, 1)",
+			shadowSize:     0
+			
+			
+		}
+	
+
+
+
+	var options = {
+		grid: {
+			borderWidth:    0,
+			color:          "#bbbbbb",
+			tickColor:      "rgba(190, 190, 190, 1)",
+			outset:         6
+		},
+		xaxis: {
+			mode: 			"time"
+		},
+		yaxis: {
+			ticks:          0,
+		}
+	}
+    $.plot($("#linegraph_{{id}}"), [data], options);
+
+	
+});
+
+</script>

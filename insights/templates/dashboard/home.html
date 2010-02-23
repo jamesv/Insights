@@ -1,0 +1,15 @@
+{% extends "layouts/dashboard.html" %}
+
+{% block title %}Dashboard{% endblock %}
+
+{% block content %}
+<li class='info'>
+	<h2>Select a Dashboard to view</h2>
+	<div class='contents'>
+	<ul>
+	{% for dashboard in dashboards %}
+	<li>&raquo;&nbsp;<a href='/dashboard/{{dashboard.id}}/'>{{dashboard}}</a></li>
+	{% endfor %}
+</ul>
+</li>
+{% endblock %}
