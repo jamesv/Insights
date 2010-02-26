@@ -93,6 +93,38 @@ class WidgetDataFunctions(object):
             'percent':      percent,
         }
 
+    #####
+    # Function: getDataRss
+    #
+    # Gets feed and params for RSS display
+    #
+    def getDataRss(self, widget):
+
+        data = Datum.objects.all().filter(widget=widget)
+        feed_data = data.filter(name='feed')[:1]
+        count_data = data.filter(name='count')[:1]
+        author_data = data.filter(name='show_author')[:1]
+        
+        feed_url = "http://news.google.com/news?ned=us&topic=h&output=rss"
+        display_count = 5
+        show_author = "true";
+        
+        if len(feed_data):
+            feed_url = feed_data[0].data_text
+
+        if len(count_data):
+            display_count = int(count_data[0].data_float)
+
+        if len(author_data):
+            show_author = author_data[0].data_text
+
+
+        return {
+            'feed_url':         feed_url,
+            'display_count':    display_count,
+            'show_author':      show_author,
+        }
+
     def getDataDefault(self, widget):
         return {'error':'Could not find widget type parser'}
 

@@ -132,6 +132,6 @@
         }
         
         #w .rss li {
-            padding: 3px;
-            border-top: 1px dotted #dddddd;
+            padding: 5px;
+            border-bottom: 1px solid #ffffff;
             }

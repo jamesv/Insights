@@ -147,10 +147,15 @@ a {
 
 
 */
-    .rss div {
+    .rss .contents a {
+        color: #666666;
+        text-decoration: none;
+        }
+        
+    .rss .contents div {
         font-size: 9px;
-        color: #777777;
-        padding-top: 2px;
+        color: #999999;
+        padding-top: 4px;
         text-align: right;
         font-family: Georgia;
         }

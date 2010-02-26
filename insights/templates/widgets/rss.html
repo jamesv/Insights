@@ -1,0 +1,9 @@
+<ul id='rss_{{id}}'>
+</ul>
+<script>
+if(google.feeds) {
+	insights.widgets.rss.loadFeed("rss_{{id}}","{{data.feed_url}}","{{data.display_count}}", "{{data.show_author}}");
+} else {
+	google.setOnLoadCallback(function() {insights.widgets.rss.loadFeed("rss_{{id}}","{{data.feed_url}}","{{data.display_count}}", "{{data.show_author}}");});
+}
+</script>
