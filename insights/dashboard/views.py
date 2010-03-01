@@ -89,12 +89,12 @@ def viewScreen(request, dashboard_id, dashboardscreen_id, dashboard=False):
             dashboard = False
 
     widgets = []
-    try:
-        dashboardscreen = dashboard.dashboardscreen_set.get(id=dashboardscreen_id)
-        for widgetslot in dashboardscreen.widgetslot_set.all():
-            widgets.append({'id':widgetslot.id, 'title':widgetslot.widget.title, 'style': widgetslot.widget.widgettype.slug,'contents':getWidgetXHTML(widgetslot)})
-    except:
-        widgets = []
+    #try:
+    dashboardscreen = dashboard.dashboardscreen_set.get(id=dashboardscreen_id)
+    for widgetslot in dashboardscreen.widgetslot_set.all():
+        widgets.append({'id':widgetslot.id, 'title':widgetslot.widget.title, 'style': widgetslot.widget.widgettype.slug,'contents':getWidgetXHTML(widgetslot)})
+    #except:
+    #    widgets = []
     if len(widgets) < 1:
         widgets.append({'id':'error', 'title':'No widgets could be found for this screen', 'style':'info','contents':mark_safe('Add some from within the admin.')})
     return render_to_response("dashboard/view_screen.html",{'widgets':widgets, 'dashboardscreen_id':dashboardscreen_id},context_instance=RequestContext(request))
