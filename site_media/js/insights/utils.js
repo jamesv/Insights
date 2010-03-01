@@ -16,7 +16,7 @@ insights.utils = {
             var time = $(this);
             var human_time = ""
             var seconds_ago = now_in_sec - (Date.parse(time.attr('title'))/1000);
-            console.log(seconds_ago)
+            //console.log(seconds_ago)
             if 
             (seconds_ago < 120) {                   // <2 minutes
                 human_time = "moments ago";

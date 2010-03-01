@@ -58,13 +58,19 @@ class WidgetDataFunctions(object):
     def getDataHeadline(self, widget):
         data = Datum.objects.all().filter(widget=widget)[:1]
         if len(data) > 0:
-            data = data[0].data_text
+            headline = data[0].data_text
+            link = data[0].data_link
+            source =data[0].data_source
         else:
-            data = ""
+            headline = ""
+            link = ""
+            source = ""
         
         
         return {
-            'headline': data,
+            'headline': headline,
+            'link': link,
+            'source': source,
         }
 
     #####
@@ -124,6 +130,21 @@ class WidgetDataFunctions(object):
             'display_count':    display_count,
             'show_author':      show_author,
         }
+        
+    #####
+    # Function: getDataValues
+    #
+    # Gets key/value pairs
+    #
+    def getDataValues(self, widget):
+
+        data_points = Datum.objects.all().filter(widget=widget)
+        obj = {}
+        for data in data_points:
+            obj[data.name] = data.data_text
+
+        return obj
+    
 
     def getDataDefault(self, widget):
         return {'error':'Could not find widget type parser'}

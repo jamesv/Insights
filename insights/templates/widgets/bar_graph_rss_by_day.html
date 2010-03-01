@@ -1,0 +1,20 @@
+<div class='normalGraph' id='bargraph_{{id}}'></div>
+<script>
+$(function () {
+	if(google.feeds) {
+		insights.graphing.barGraph_RssByDay("bargraph_{{id}}","{{data.feed_url}}");
+	} else {
+		google.setOnLoadCallback(function() {insights.graphing.barGraph_RssByDay("bargraph_{{id}}","{{data.feed_url}}");});
+	}
+
+// 	var line_data = [
+// {% for value, timestamp in data.graph_points %}
+// 		[{{timestamp}},{{value}}]{% if not forloop.last %},{% endif %}
+// {% endfor %}
+// 	]
+// 	
+// 	insights.graphing.lineGraph("#linegraph_{{id}}", line_data)
+// 	
+});
+
+</script>

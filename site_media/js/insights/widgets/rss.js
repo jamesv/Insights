@@ -5,7 +5,6 @@ if (!insights.widgets) { insights.widgets = {}; }
 insights.widgets.rss = {
     
     loadFeed: function(id, feed, display_count, show_author) {
-        console.log(id + " _ " + feed);
         
         var feed = new google.feeds.Feed(feed);
         feed.load(function(result) {

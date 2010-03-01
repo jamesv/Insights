@@ -1,1 +1,6 @@
-<div class='quote'><blockquote>{{data.headline}}</blockquote></div>
+<div class='quote'>
+	<blockquote>{{data.headline}}</blockquote>
+	{% if data.link %}
+	<div class='tr'><a href='{{data.link}}'>{{data.source}}</a> &raquo;</div>
+	{% endif %}
+</div>
