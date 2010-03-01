@@ -19,7 +19,8 @@
                 padding: 0;
                 }
         
-    .info .contents {
+    .info .contents,
+    .msg {
         padding: 5px;
     }
 

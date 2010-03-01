@@ -40,6 +40,7 @@ insights.graphing = {
     			ticks:          0,
     		}
     	}
+    	$("#"+id).removeClass('hider');
         $.plot($("#"+id), [data], options);
 
     },
@@ -74,6 +75,7 @@ insights.graphing = {
     			ticks:          0,
     		}
     	}
+    	$("#"+id).removeClass('hider');
         $.plot($("#"+id), [data], options);
 
     },

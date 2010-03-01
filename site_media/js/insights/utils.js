@@ -38,6 +38,20 @@ insights.utils = {
         });
     },
     
+    getGADateObj : function(gaDate) {
+      var date = new Date();
+      var year = parseInt(gaDate.substring(0, 4), 10);
+      var month = parseInt(gaDate.substring(4, 6), 10) - 1;
+      var day = parseInt(gaDate.substring(6, 8), 10);
+      date.setFullYear(year);
+      date.setMonth(month, day);
+      return date;
+    },
+    
+    padDouble: function(num) {
+        return (num < 10 ? '0' : '') + num;
+    },
+
     init: function() {
 
     }

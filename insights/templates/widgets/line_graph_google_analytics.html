@@ -1,0 +1,17 @@
+<div class='normalGraph hider' id='linegraph_{{id}}'></div>
+<div class='msg'>
+	<span class="status">Loading API Libraries...</span>
+</div>
+
+<script>
+$(function () {
+	$("#linegraph_{{id}}").data('table_id', '{{data.table_id}}')
+	
+	if(google.gdata) {
+		insights.google_analytics.init({{id}});
+	} else {
+		google.setOnLoadCallback(function() {insights.google_analytics.init({{id}})});
+	}
+	
+});
+</script>

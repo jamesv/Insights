@@ -80,7 +80,7 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.auth.middleware.AuthenticationMiddleware',
 )
 
-ROOT_URLCONF = 'deploy.urls'
+ROOT_URLCONF = 'Insights.urls'
 
 
 TEMPLATE_DIRS = (

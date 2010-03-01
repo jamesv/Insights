@@ -24,10 +24,14 @@
 	<script src="{{media_url}}/js/insights/core.js"></script>
 	<script src="{{media_url}}/js/insights/utils.js"></script>
 	<script src="{{media_url}}/js/insights/graphing.js"></script>
+	<script src="{{media_url}}/js/insights/google_analytics.js"></script>
 	<script src="{{media_url}}/js/insights/widgets/rss.js"></script>
 	
 	<script type="text/javascript" src="http://www.google.com/jsapi?key=ABQIAAAAz8U4bwxy-8udwdlG3xXH6BS9RAyx1yFOrrspTuwRkxvkwmStKBRKWM6WtOriIBlGDZ10O2TZpOYeHw"></script>
-	<script>google.load("feeds", "1");</script>
+	<script>
+		google.load("feeds", "1");
+		google.load('gdata', '2.x', {packages: ['analytics']});
+	</script>
 	
 	<title>{% block title %}{% endblock %}</title>
 </head>
@@ -46,5 +50,6 @@
 			{% block content %}{% endblock %}			
 		</ul>
 	</div>
+	<img style="visibility:hidden" src="__utm.gif" alt="required for GData"/>
 </body>
 </html>
