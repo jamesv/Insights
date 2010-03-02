@@ -6,7 +6,7 @@ insights.widgets.flickr = {
     API_KEY: 'd103c1d422db83b696ad7e084b7ce388',
     API_SECRET: '28058e9b0909c282',
     FLICKR_SEARCH: 'http://api.flickr.com/services/rest/?method=flickr.photos.search&format=json&jsoncallback=?&api_key=',
-    FLICKR_PHOTOS : 11,
+    FLICKR_PHOTOS : 5,
     
     drawFlickrPhotos: function(params, id){
         var flickr_id = id;
