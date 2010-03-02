@@ -136,3 +136,22 @@
             padding: 5px;
             border-bottom: 1px solid #ffffff;
             }
+            
+            
+/*
+
+
+*/
+    #w .photos {
+        padding: 7px 13px;
+        }
+        
+        #w .photos li {
+            float: left;
+            margin: 7px;
+            background: #ffffff;
+            border: 2px solid #ffffff;
+            }
+
+        
+        
