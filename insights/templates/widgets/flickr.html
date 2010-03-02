@@ -3,7 +3,9 @@
 <script>
 $(function () {
 	var params = ""
-	params += '&tags=organicinc'
+	{% if data.tags %}
+	params += '&tags={{data.tags}}'
+	{% endif %}
 	insights.widgets.flickr.drawFlickrPhotos(params, 'flickr_{{id}}');
 });
 </script>
