@@ -1,0 +1,169 @@
+body {
+    background: #dddddd;
+    color: #9d9d9d;
+    }
+    
+a {
+    color: #9aaf4a;
+    }
+
+img {
+    border: none;
+    }
+/*
+
+
+*/    
+
+#wrapper {
+    background: url('img/bg.gif') #c9c9c9 top center no-repeat;
+    }
+
+
+    #w li {
+        background: url('img/widget_bg.png') no-repeat;
+        }
+        
+        #w li li {
+            background: none;
+        }
+#header,
+#w {
+    font-family: Arial;
+    font-size: 12px;
+    }
+
+#header h2 {
+    color: #37383a;
+    font-size: 11px;
+    margin: 0px;
+    padding: 0px;
+    }
+        
+        #header li a {
+            background: #191919;
+            font-family: Arial;
+            text-decoration: none;
+            color: #a0a0a0;
+            font-weight: normal;
+            font-size: 14px;
+            letter-spacing: 1px;
+            }
+        
+        #header li.current {
+            background: url('img/nav_arrow.png') center bottom no-repeat;
+            }
+            
+        #header li.current a {
+            background: #8fd400;
+            color: #000000;
+            }
+    
+        
+    #w h2 {
+        font-family: Arial;
+        font-size: 14px;
+        color: #e81e75;
+        margin: 0;
+        padding: 15px 0 15px 25px;
+        font-weight: normal;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        }
+
+    #w h4 {
+        margin: 0;
+        padding: 0;
+        }
+
+    #w .contents {
+        padding: 15px;
+    }
+
+/*
+
+
+*/    
+    .count h4 {
+        font-size: 36px;
+        color: #00A7FF;
+        font-family: Georgia;
+        }
+/*
+
+
+*/        
+    .progress h4 {
+        font-family: Georgia;
+        color: #4d82a2;
+        font-size: 16px;
+        font-weight: normal;
+        }
+
+
+/*
+
+
+*/
+    .headline blockquote {
+        font-size: 16px;
+        font-family: Georgia;
+    }
+
+/*
+
+
+*/  
+    .calendar table {
+        background: #d4d4d4;
+        }
+        
+    .calendar td {
+        padding: 3px 0;
+        text-align: center;
+        font-size: 11px;
+        background: #c4c4c4;
+        color: #ffffff;
+        font-family: Georgia;
+        }
+        
+        .calendar td.in_range {
+            background: #ffffff;
+            color: #aaaaaa;
+            }
+            
+        .calendar td.active {
+            font-weight: bold;
+            background: #41bdff;
+            color: #ffffff;
+            }
+            
+        .calendar dl {
+            font-size: 10px;
+            }
+        .calendar dt {
+            font-weight: bold;
+            color: #545454;
+            }
+            
+        .calendar dd {
+            color: #777777;
+            }
+        
+
+/*
+
+
+*/
+    .rss .contents a {
+        color: #666666;
+        text-decoration: none;
+        }
+        
+    .rss .contents div {
+        font-size: 9px;
+        color: #999999;
+        padding-top: 4px;
+        text-align: right;
+        font-family: Georgia;
+        }

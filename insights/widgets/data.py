@@ -7,6 +7,7 @@
 # Author: $Author: jamesv $
 #
 #
+#from django.db.models import Q
 import time
 
 from insights.widgets.display import splitThousands
@@ -22,7 +23,7 @@ class WidgetDataFunctions(object):
     # Gets most recently entered count info
     #
     def getDataCount(self, widget):
-        data = Datum.objects.all().filter(widget=widget)[:1]
+        data = Datum.objects.all().filter(widget=widget).filter(name="default")[:1]
         if len(data) > 0:
             data = data[0].data_float
         else:
@@ -38,7 +39,7 @@ class WidgetDataFunctions(object):
     # Gets data set for drawing a line graph
     #
     def getDataLinegraph(self, widget):
-        data_points = Datum.objects.all().filter(widget=widget)[:30]
+        data_points = Datum.objects.all().filter(widget=widget).filter(name="default")[:30]
         graph_points = []
         
         if len(data_points) > 0:
@@ -155,7 +156,7 @@ class WidgetDataFunctions(object):
 
 
 ###
-# Function: getWidgetData
+# Function: getWidgetSlotData
 #
 # Gets widget params and data
 #
@@ -165,15 +166,17 @@ class WidgetDataFunctions(object):
 # Returns:
 #   widget_content
 #
-def getWidgetData(widgetslot):
+def getWidgetData(widget):
+    widgets_data_functions = WidgetDataFunctions()
+    return widgets_data_functions.doCommand(widget.widgettype.slug, widget)
+    
+def getWidgetSlotData(widgetslot):
     
     params = {
         'prefix':   "$"
     }
     
-    widgets_data_functions = WidgetDataFunctions()
-    data = widgets_data_functions.doCommand(widgetslot.widget.widgettype.slug, widgetslot.widget)
-    
+    data = getWidgetData(widgetslot.widget)
 
     widget_content = {'data':data,'params':params,'id':widgetslot.id}
     return widget_content

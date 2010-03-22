@@ -13,8 +13,6 @@ from django.utils.safestring import mark_safe
 from django import template
 from django.conf import settings
 
-import logging
-
 register = template.Library()
 
 
@@ -31,7 +29,6 @@ register = template.Library()
 #
 @register.filter
 def drawNav(nav):
-    logging.error(nav)
     if nav == '':
         nav = settings.DASHBOARD_DEFAULTS['nav']
         

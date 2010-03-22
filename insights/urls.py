@@ -18,5 +18,7 @@ urlpatterns += patterns('',
 
     (r'^$',                         'insights.dashboard.views.home'),
     (r'^dashboard/',                include('insights.dashboard.urls')),
+    (r'^data/',                     include('insights.data.urls')),
     (r'^accounts/',                 include('insights.accounts.urls')),
+
 )

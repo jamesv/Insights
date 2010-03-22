@@ -11,7 +11,7 @@
 from django.shortcuts import render_to_response
 from django.utils.safestring import mark_safe
 
-from insights.widgets.data import getWidgetData
+from insights.widgets.data import getWidgetSlotData
 
 ###
 # Function: getWidgetXHTML
@@ -26,7 +26,7 @@ from insights.widgets.data import getWidgetData
 #
 def getWidgetXHTML(widgetslot):
 
-    widget_content = getWidgetData(widgetslot)
+    widget_content = getWidgetSlotData(widgetslot)
         
     widget_html = render_to_response("widgets/"+widgetslot.widget.widgettype.template+".html", widget_content).content
     return mark_safe(widget_html)

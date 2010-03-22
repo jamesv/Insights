@@ -39,6 +39,7 @@ class WidgetType(models.Model):
     title = models.CharField(max_length=30)
     template = models.CharField(max_length=30)
     slug = models.CharField(max_length=30)
+    data = models.CharField(max_length=30, null=True, blank=True)
 
     def __unicode__(self):
         return self.title
