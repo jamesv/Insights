@@ -173,7 +173,7 @@ def getWidgetData(widget):
 def getWidgetSlotData(widgetslot):
     
     params = {
-        'prefix':   "$"
+        'prefix':   ""
     }
     
     data = getWidgetData(widgetslot.widget)

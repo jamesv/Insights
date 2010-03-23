@@ -1,13 +1,17 @@
 #w {
     margin: 0;
-    padding: 7px;
+    padding: 7px 0 7px 7px;
     }
 
     #w li {
         list-style: none;
-        margin: 0 0 12px 0;
-        
+        margin: 0;        
         }
+        
+        #w li.progress {
+            background: url('img/widget_bg_b.png') no-repeat;
+            }
+        
 
         #w li ul {
             margin: 0;
@@ -38,40 +42,36 @@
 
 
 */    
-    .progress .contents{
-        position: relative;
-        padding: 7px;
+    #w .progress {
+        height: 128px;
     }
+    #w .progress .contents{
+        position: relative;
+        padding: 0 15px 0 26px;
+        }
+
     .progress h4 {
-        position: absolute;
         margin: 0;
         padding: 0;
-        text-align: right;
-        top: 8px;
         }
-    
-    .progress .current {
-        padding: 0 15px 0 0;
-        }
-        
-    .progress .goal {
-        display: none;
+    .progress h4 .breaker {
+        display: block;
+        width: 280px;
+        padding-top: 10px;
         }
         
     .progressBar {
-        padding: 0 10px 4px;
-        background: url('img/progress_bg.png') bottom center no-repeat;
+        padding: 0;
+        background: url('img/progress_bg.png');
         }
         
         .progressBar .progressFill {
             
-            background: url('img/progress_fill.png') bottom left repeat-x;
-            border-right: 3px solid #5f95b0;
+            background: url('img/progress_fill.png');
             }
         
         .progressBar .progressFill div {
-            height: 55px;
-            border-right: 1px solid rgba(224, 240, 204, 0.5);
+            height: 30px;
             }
             
             

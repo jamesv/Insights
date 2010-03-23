@@ -92,7 +92,7 @@ def viewScreen(request, dashboard_id, dashboardscreen_id, dashboard=False):
     try:
         dashboardscreen = dashboard.dashboardscreen_set.get(id=dashboardscreen_id)
         for widgetslot in dashboardscreen.widgetslot_set.all():
-            widgets.append({'id':widgetslot.id, 'title':widgetslot.widget.title, 'style': widgetslot.widget.widgettype.slug,'contents':getWidgetXHTML(widgetslot)})
+            widgets.append({'id':widgetslot.id, 'title':widgetslot.widget.title, 'style': widgetslot.widget.widgettype.template,'contents':getWidgetXHTML(widgetslot)})
     except:
         widgets = []
     if len(widgets) < 1:

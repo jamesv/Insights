@@ -96,9 +96,14 @@ img {
     .progress h4 {
         font-family: Georgia;
         color: #4d82a2;
-        font-size: 16px;
+        font-size: 14px;
         font-weight: normal;
         }
+
+        .progress .goal {
+            color: #bbbbbb;
+            }
+
 
 
 /*
