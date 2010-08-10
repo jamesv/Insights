@@ -2,3 +2,4 @@ settings.py
 setting.pyc
 urls.py
 urls.pyc
+*.pyc
