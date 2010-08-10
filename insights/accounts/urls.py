@@ -18,8 +18,8 @@ urlpatterns += patterns('',
     url(r'^logout/$', 'django.contrib.auth.views.logout',{'template_name': 'accounts/logout.html'}),
 )
 
-urlpatterns += patterns('insights.accounts.views',
-    #url(r'^$','foo',name='accounts-foo'),
-)
+# urlpatterns += patterns('insights.accounts.views',
+#     #url(r'^$','foo',name='accounts-foo'),
+# )
 
 
