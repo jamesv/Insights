@@ -8,7 +8,7 @@
 	<div class='contents'>
 	<ul>
 	{% for dashboard in dashboards %}
-	<li>&raquo;&nbsp;<a href='/dashboard/{{dashboard.id}}/'>{{dashboard}}</a></li>
+	<li>&raquo;&nbsp;<a href='/dashboard/{{dashboard.id}}/'>{{dashboard|safe}}</a></li>
 	{% endfor %}
 </ul>
 </li>
