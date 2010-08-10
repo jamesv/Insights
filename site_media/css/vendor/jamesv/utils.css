@@ -1,3 +1,5 @@
+body { text-rendering: optimizeLegibility;}
+
 .hider { display: none; }
 
 .block { display: block; }
